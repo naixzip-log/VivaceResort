@@ -1,0 +1,22 @@
+/* desktop */
+@media screen and (min-width: 1024px){
+    .pcol01{ float: left; width: 33.33% }
+    .pcol02{ float: left; width: 50% }
+    .pcol03{ float: left; width: 100% }
+    .pcol04{ float: left; width: 66.66% } 
+}
+
+/* tablet */
+@media screen and (max-width: 1023px){
+    .tcol01{ float: left; width: 33.33% } 
+    .tcol02{ float: left; width: 50% }
+    .tcol03{ float: left; width: 100% } 
+    .tcol04{ float: left; width: 66.66% } 
+}
+
+/* mobile */
+@media screen and (max-width: 767px){
+    .mcol01{ float: left; width: 33.33% } 
+    .mcol02{ float: left; width: 50% } 
+    .mcol03{ float: left; width: 100% }
+}

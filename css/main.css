@@ -1,0 +1,496 @@
+@charset "UTF-8";
+
+/* ======================공통작업=============================== */
+/* main */
+main{
+    width: 100%; overflow: hidden; 
+    min-height: 568px; 
+}
+main .swiper-container{ width: 100%; height: 100%; }
+main .swiper-slide{ 
+    height: 100%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+main .swiper-container-horizontal>.swiper-pagination-bullets, main .swiper-pagination-custom, main .swiper-pagination-fraction{
+    width: 15px; 
+    height: 70px; 
+    left: calc(100% - 30px);
+    top: 0; bottom: 0; margin: auto 0; 
+}
+main .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{ margin: 0; margin-bottom: 5px; }
+main .swiper-pagination-bullet{ 
+    display: block; 
+    width: 15px; height: 15px; border-radius: 8px;
+}
+main .swiper-pagination-bullet-active{
+    height: 30px; background-color: #bf9c6c;
+}
+main .table{
+    display: table; width: 100%; height: 100%; 
+}
+main .table_cell{
+    display: table-cell; width: 100%; height: 100%; 
+    text-align: center; vertical-align: middle; 
+}
+main h3{ color: #fff; font-size: 3rem; margin-bottom: 30px; }
+main h3 br{ display: none; }
+main p{ color: #fff; font-size: 1.5rem; }
+main .table_cell > *{ opacity: 0; }
+main .table_cell > *.active{ opacity: 1; transition: 0.6s; }
+
+
+/* dignity */
+.dignity{
+    width: 100%; overflow: hidden;
+    padding-bottom: 180px;
+}
+.dignity .wrap{
+    background-image: url(../images/main/business_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    margin-bottom: 180px;
+}
+.dignity h3{
+    color: #bf9c6c; font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.dignity h3 br{ display: none; }
+.dignity p{
+    color: #b0b0b0; 
+}
+.dignity .bottom_text{ text-align: center; }
+
+
+/* gold_title */
+.gold_title h3{
+    width: 100%; box-sizing: border-box;
+    border-left: 3px solid #bf9c6c; padding: 10px; margin-bottom: 30px;
+    font-size: 2rem; font-weight: 700; color: #bf9c6c;
+}
+.gold_title p{ color: #999; }
+
+
+/* story */
+.story{ width: 100%; overflow: hidden; padding: 80px 0; position: relative; }
+.story .swiper-slide img{ display: block; width: 100%; margin-bottom: 20px; }
+.story .swiper-slide .text{ display: block; width: 100%; height: 20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.story .swiper-pagination{ left: 20px; bottom: 100px; }
+.story .swiper-pagination-bullet{ width: 60px; height: 4px; margin: 0 3px; border-radius: 0; background-color: #ccc; opacity: 1; }
+.story .swiper-pagination-bullet-active{ background-color: #bf9c6c; }
+
+/* customer */
+.customer{ width: 100%; overflow: hidden; padding: 80px 0; }
+.customer figure .img{ 
+    background-image: url(../images/main/customer_img.jpg); 
+    background-repeat: no-repeat; 
+    background-size: cover; background-position: center; 
+    text-indent: -999em; 
+}
+.customer figcaption h3{ font-size: 2rem; color: #fff; margin-bottom: 20px; }
+.customer figcaption{ background-color: #b8c2b2; }
+.customer figcaption p{ color: #fff; margin-bottom: 15px; }
+.customer figcaption a{
+    display: inline-block; height: 35px; line-height: 35px;
+    padding: 0 80px 0 20px; background-color: #4b5143;
+    color: #fff;
+    background-image: url(../images/main/next_arrow.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+}
+
+
+/* company */
+.company{
+    width: 100%; overflow: hidden; padding: 80px 0;
+    background-color: #b2c7d7;
+}
+.company .img{
+    background-image: url(../images/main/company_img.jpg);
+    background-repeat: no-repeat; 
+    background-position: center; background-size: cover;
+    text-indent: -999em; 
+}
+.company .top_text{ color: #fff; padding-bottom: 10px; border-bottom: 1px solid #fff; margin-bottom: 20px; }
+.company .top_text_mobile{ color: #fff; padding-bottom: 10px; border-bottom: 1px solid #fff; margin-bottom: 20px; }
+.company h3{ font-size: 2rem; color: #fff; margin-bottom: 50px; }
+.company .bottom_text{ color: #fff; font-size: 0.875rem; }
+
+
+/* play - pc와 태블릿 공통 */
+.play{ width: 100%; height: 500px; overflow: hidden; }
+.play dl{
+    position: relative; 
+    clear: both; 
+    max-width: 1920px; height: 500px; margin: 0 auto; 
+    
+}
+.play dt{
+    position: relative; 
+    z-index: 10; cursor: pointer;
+    float: left; width: 130px; height: 100%;
+    background: rgba(179,157,131,0.9);
+    border-left: 2px solid rgb(255,255,255,0.9);
+    box-sizing: border-box; 
+    transition: 0.5s;
+}
+.play dt > div > *{ display: none; }
+.play dt > div > h3{ 
+    display: block; width: 200px; transform: rotate(-90deg);
+    position: absolute; top: 200px; left: -38px;
+    font-size: 1.25rem; color: #fff; font-weight: 700;
+}
+.play dt:after{
+    content: ""; display: block;
+    width: 50px; height: 7px; background: #fff;
+    position: absolute; right: 0; bottom: 80px;
+}
+.play dd{ 
+    opacity: 0; transition: 0.6s;
+    position: absolute; top: 0; z-index: 5;
+    width: 100%; height: 100%;
+}
+.play dd img{ 
+    object-fit: cover; 
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+/* 활성화시 dt글자들 활성화 */
+.play dt.active{
+    width: calc(100% - (130px * 3)); 
+    display: table; 
+    background-color: transparent;
+    border-left: none;
+}
+.play dt.active div{
+    display: table-cell; width: 100%; text-align: center; vertical-align: middle;
+}
+.play dt.active:after{
+    width: 1px; height: 40px; margin: 0 auto;
+    left: 0; right: 0; top: 175px;
+}
+.play dt.active h3{
+    position: static; transform: rotate(0deg); width: 100%;
+    margin-bottom: 50px;
+}
+.play dt.active > div > p{ display: block; color: #fff; margin-bottom: 50px; }
+.play dt.active > div > .btnC{ display: block; width: 100%; text-align: center; }
+.play dt.active > div > .btnC > a{
+    display: inline-block; height: 35px; line-height: 35px;
+    padding: 0 80px 0 20px; background-color: #bf9c6c;
+    color: #fff;
+    background-image: url(../images/main/next_arrow.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+}
+
+
+/* 활성화시 바로 뒤에 이미지가 보이게 처리 */
+.play dt.active + dd{ opacity: 1; }
+
+
+/* ======================desktop=============================== */
+@media screen and (min-width: 1024px){
+    /* main */
+    main .main01{ background-image: url(../images/main/p_main01.jpg); }
+    main .main02{ background-image: url(../images/main/p_main02.jpg); }
+    main .main03{ background-image: url(../images/main/p_main03.jpg); }
+    
+    /* dignity */
+    .dignity .wrap{ padding: 0 20px; box-sizing: border-box; }
+    .dignity .nature{
+        width: 100%; overflow: hidden; 
+        margin-bottom: 40px;
+    }
+    .dignity .nature video{
+        float: right; height: 380px;
+        margin-right: 100px;
+    }
+    .dignity .nature .text_wrap{
+        float: left; height: 380px;
+        padding-top: 60px; box-sizing: border-box;
+    }
+    .dignity .nature .text_wrap p{
+        line-height: 1.8rem; margin-bottom: 20px;
+    }
+    .dignity .family{
+        width: 100%; overflow: hidden; 
+        padding-bottom: 250px;
+    }
+    .dignity .family video{
+        float: left; height: 420px;
+        margin-right: 50px;
+    }
+    .dignity .family .text_wrap{
+        float: left; height: 420px;
+        padding-top: 70px; box-sizing: border-box;
+    }
+    .dignity .family .text_wrap p{
+        line-height: 1.8rem; margin-bottom: 20px;
+        color: #ededed;
+    }
+    .dignity .bottom_text p{
+        line-height: 3rem;
+    }
+    
+    /* story */
+    .story{ box-sizing: border-box; padding-left: 20px; }
+    
+    /* customer */
+    .customer .wrap{ box-sizing: border-box; padding: 0 20px; }
+    .customer figure{ 
+        position: relative; 
+        padding-bottom: 50px;
+    } 
+    .customer figure .img{
+        position: absolute; bottom: 20px; right: 30px;
+        width: 50%; height: 25vw;
+    }
+    .customer figcaption{
+        width: 100%; padding: 30px; padding-top: 8vw; box-sizing: border-box;
+    }
+    
+    /* company */
+    .company .img{
+        height: 30vw; 
+    }
+    .company .text_wrap > *{
+        width: 580px; max-width: calc(100% - 60px); 
+        margin: 0 30px; box-sizing: border-box;
+    }
+    .company .text_wrap h3{ margin-bottom: 50px; }
+    .company .text_wrap .top_text{ margin-bottom: 20px; }
+    .company .top_text_mobile{ display: none; }
+}
+
+
+/* ======================large desktop=============================== */
+@media screen and (min-width: 1280px){
+    /* story */
+    .story .gold_title{ width: 640px; float: right; }
+    .story .swiper-pagination{ left: calc(50% - 630px); }
+    
+    /* customer */
+    .customer .wrap{ box-sizing: border-box; padding: 0; }
+    .customer figure .img{ width: 430px; height: 350px; }
+    .customer figcaption{ padding-top: 150px; }
+    
+    /* dignity */
+    .dignity .wrap{ padding: 0; }
+    .dignity .nature{
+        width: 100%; overflow: hidden; 
+        margin-bottom: 40px;
+    }
+    .dignity .nature video{
+        float: right; height: 560px;
+        margin-right: 100px;
+    }
+    .dignity .nature .text_wrap{
+        float: left; height: 560px;
+        padding-top: 120px; box-sizing: border-box;
+    }
+    .dignity .nature .text_wrap p{
+        line-height: 1.8rem; margin-bottom: 20px;
+    }
+    
+    /* company */
+    .company .img{
+        height: 20vw; 
+    }
+    .company .text_wrap > *{
+        width: 610px; max-width: calc(100% - 30px); 
+        margin-left: 30px; box-sizing: border-box;
+    }
+    .company .text_wrap{ padding: 4vw 0; }
+}
+
+
+/* ======================tablet=============================== */
+@media screen and (max-width: 1023px){
+    /* main */
+    main .main01{ background-image: url(../images/main/t_main01.jpg); }
+    main .main02{ background-image: url(../images/main/t_main02.jpg); }
+    main .main03{ background-image: url(../images/main/t_main03.jpg); }
+    
+    /* dignity */
+    .dignity{
+        width: 100%; overflow: hidden;
+        padding-bottom: 90px;
+    }
+    .dignity .wrap{ 
+        padding: 0 50px; box-sizing: border-box; 
+        background-size: 50%;
+        background-position: calc(100% - 50px) bottom; 
+        margin-bottom: 90px;
+    }
+    .dignity .nature{
+        width: 100%; overflow: hidden; 
+        margin-bottom: 20px;
+        
+    }
+    .dignity .nature video{
+        float: right; width: 60%;
+        margin-right: 30px;
+    }
+    .dignity .nature .text_wrap{
+        float: left; 
+        padding-top: 30px; box-sizing: border-box;
+    }
+    .dignity .nature .text_wrap p{
+        line-height: 1.8rem; margin-bottom: 20px;
+    }
+    .dignity .family{
+        width: 100%; overflow: hidden; 
+        padding-bottom: 80px;
+    }
+    .dignity .family video{
+        float: left; width: 50%;
+        margin-right: 50px;
+    }
+    .dignity .family .text_wrap{
+        float: left; 
+        padding-top: 20px; box-sizing: border-box;
+    }
+    .dignity .family .text_wrap p{
+        line-height: 1.8rem; margin-bottom: 0;
+        color: #ededed;
+    }
+    .dignity .family .text_wrap p br{ display: none; }
+    .dignity .bottom_text p{
+        line-height: 3rem;
+    }
+    
+    /* story */
+    .story{
+        padding-left: 50px; box-sizing: border-box;
+    }
+    .story .swiper-pagination{ left: 50px; }
+    .story .swiper-pagination-bullet{ width: 40px; }
+    
+    
+    /* customer */
+    .customer .wrap{ box-sizing: border-box; padding: 0 50px; }
+    .customer figure{ 
+        position: relative; 
+        padding-bottom: 50px;
+    } 
+    .customer figure .img{
+        position: absolute; bottom: 20px; right: 15px;
+        width: 40%; height: 33vw;
+    }
+    .customer figcaption{
+        width: 100%; padding: 80px 15px 30px 15px; box-sizing: border-box;   
+    }
+    .customer .contents{ padding-left: 30px; box-sizing: border-box; }
+    
+    
+    /* company */
+    .company .img{
+        height: 40vw; 
+    }
+    .company .text_wrap > *{
+        width: calc(100% - 60px); 
+        margin: 0 30px; box-sizing: border-box;
+    }
+    .company .text_wrap h3{ margin-bottom: 50px; }
+    .company .text_wrap .top_text{ margin-bottom: 20px; }
+    .company .top_text_mobile{ display: none; }
+}
+
+
+/* ======================mobile=============================== */
+@media screen and (max-width: 767px){
+    /* main */
+    main .main01{ background-image: url(../images/main/m_main01.jpg); }
+    main .main02{ background-image: url(../images/main/m_main02.jpg); }
+    main .main03{ background-image: url(../images/main/m_main03.jpg); }
+    main h3 br{ display: block; }
+    
+    /* dignity */
+    .dignity{
+        width: 100%; overflow: hidden;
+        padding: 0; margin: 0;
+    }
+    .dignity .wrap{ 
+        background-image: none;
+        padding: 60px 30px; box-sizing: border-box;
+        margin: 0;
+    }
+    .dignity .nature{ margin-bottom: 40px; }
+    .dignity .nature video, .dignity .family video{ float: none; width: 100%; margin: 0; margin-bottom: 20px; }
+    .dignity .nature .text_wrap, .dignity .family .text_wrap{ float: none; width: 100%; padding: 0; margin: 0; }
+    .dignity .nature .text_wrap br, .dignity .family .text_wrap br{ display: none;  }
+    .dignity .nature .text_wrap p{ margin-bottom: 0; }
+    .dignity .family{ margin-bottom: 0; padding: 0; }
+    .dignity .family .text_wrap p{ color: #b0b0b0; }
+    .dignity h3 br{ display: block; }
+    .dignity .bottom_text{ margin-bottom: 100px; }
+    .dignity .bottom_text p{ line-height: 1.8rem; padding: 0 50px; }
+    
+    /* story */
+    .story{ padding-left: 30px; }
+    .story .gold_title{ margin-bottom: 30px; }
+    .story .swiper-pagination{ display: none; }
+    
+    /* customer */
+    .customer .wrap{ box-sizing: border-box; padding: 0; }
+    .customer .gold_title{ margin-bottom: 30px; padding: 0 30px; box-sizing: border-box; }
+    .customer .contents{ padding: 0; }
+    .customer figure{ padding-left: 30px; box-sizing: border-box; }
+    .customer figure .img{
+        position: static; 
+        width: 100%; height: 70vw;
+    }
+    .customer figcaption{
+        position: absolute; bottom: -10px; left: 0;
+        width: 250px; padding: 15px 30px; box-sizing: border-box;
+    }
+    
+    
+    /* company */
+    .company{
+        padding: 30px; box-sizing: border-box;
+    }
+    .company .img{
+        height: 60vw; margin-bottom: 50px;
+    }
+    .company .text_wrap > *{
+        width: 100%; margin: 0; 
+    }
+    .company .text_wrap > h3{ font-size: 1.8rem; }
+    .company .top_text{ display: none; }
+    .company .top_text_mobile{ display: block; }
+    
+    /* play */
+    .play dt{
+        float: none; 
+        width: 100%; height: 45px;
+        border-left: none; border-top: 2px solid rgba(255,255,255,0.9); 
+    }
+    .play dt > div > h3{
+        position: static; transform: rotate(0deg);
+        line-height: 43px; padding-left: 20px; box-sizing: border-box;
+    }
+    .play dt:after{
+        position: absolute; right: 20px; top: 0;
+         width: 3px; height: 20px;
+    }
+    
+    /* 활성화 */
+    .play dt.active{
+        width: 100%; height: calc(100% - (45px * 3)); 
+    }
+    .play dt.active > div > h3{ padding: 0; }
+    .play dt.active:after{ top: 115px; }
+}
+
+
+/* ====================== iphone5 & se ========================== */
+@media screen and (max-width: 320px){
+    
+}
